@@ -8,10 +8,9 @@
 #include <ctype.h>  // is lower() and isdigit()
 int main(int argc, string argv[1])
 {
-    int key[25]; // do I need to know the size here? yes I do
+    int key[25]; // may need to change the size of the key here 
 
-    // verify they only enter one value for argcA
-    // can I just add another condition here to check for all alpha?
+    // verify they only enter one value for argc
     if ( argc != 2 )
     {
     printf("please enter only one key value.\n");
@@ -19,7 +18,7 @@ int main(int argc, string argv[1])
     return 1;
     }
     
-    // Verify each character entered is a letter 
+    // Verify each character in the key entered is a letter 
     for (int i = 0, len = strlen(argv[1]); i < len; i++)
     {
 
@@ -32,7 +31,7 @@ int main(int argc, string argv[1])
 
     // loop each letter in the key
     for (int i = 0, n = strlen(argv[1]); i < n; i++)
-    {    printf("%c\n", argv[1][i]);
+    {    printf("%c:  ", argv[1][i]);
     // check the value of what was entered
 
     // check for lower case
@@ -40,6 +39,9 @@ int main(int argc, string argv[1])
         {
         printf("%d\n", argv[1][i] - 97);
         key[i] = argv[1][i] - 97;
+
+        //  print the c value, after applying the key
+        printf("  the new value is %d\n", argv[1][i] + key[i]);
         }
         
     // check to see if it's uppercase
