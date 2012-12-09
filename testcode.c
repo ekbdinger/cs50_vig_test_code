@@ -22,13 +22,30 @@ int main(int argc, string argv[1])
     for (int i = 0, n = strlen(argv[1]); i < n; i++)
     {    printf("%c\n", argv[1][i]);
     // check the value of what was entered
-    printf("%d\n", argv[1][i] - 97);
-    key[i] = argv[1][i] - 97;
-    //printf("\n\n%c", key[2]);
-    }
-                
-    printf("\n\n%d\n", key[1]);
 
+    // check for lower case
+        if ( islower (argv[1][i]) )
+        {
+        printf("%d\n", argv[1][i] - 97);
+        key[i] = argv[1][i] - 97;
+        }
+    }    
+                
+        // this was basically a sanity check
+        printf("\n\n%d\n", key[1]);
+
+    /* realizing that I only really need to check whether it's
+    upper or lower to get that value and to store it away
+    in an array.  
+
+    So, check which the character is and then subtract by 
+    97 or 65.  Then store that away
+        then we'll use that to shift later on
+
+        then we'll take the size of the array and use it
+        as a module % to loop back around
+    calling it a night
+    */
 
     return 0;
 }
