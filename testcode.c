@@ -8,7 +8,7 @@
 #include <ctype.h>  // is lower() and isdigit()
 int main(int argc, string argv[1])
 {
-    int key[]; // do I need to know the size here? yes I do
+    int key[25]; // do I need to know the size here? yes I do
 
     // verify they only enter one value for argc
     if ( argc != 2 )
@@ -24,8 +24,10 @@ int main(int argc, string argv[1])
     // check the value of what was entered
     printf("%d\n", argv[1][i] - 97);
     key[i] = argv[1][i] - 97;
+    //printf("\n\n%c", key[2]);
     }
                 
+    printf("\n\n%d\n", key[1]);
 
 
     return 0;
