@@ -10,12 +10,24 @@ int main(int argc, string argv[1])
 {
     int key[25]; // do I need to know the size here? yes I do
 
-    // verify they only enter one value for argc
+    // verify they only enter one value for argcA
+    // can I just add another condition here to check for all alpha?
     if ( argc != 2 )
     {
     printf("please enter only one key value.\n");
     printf("Usage:  /home/cs50/pset2/caesar <key>\n\n ");
     return 1;
+    }
+    
+    // Verify each character entered is a letter 
+    for (int i = 0, len = strlen(argv[1]); i < len; i++)
+    {
+
+        if ( (isalpha(argv[1][i])) == false )
+        {
+            printf("only enter alphabetical characters for the key\n\n");
+            return 1;
+        }
     }
 
     // loop each letter in the key
@@ -41,18 +53,9 @@ int main(int argc, string argv[1])
         // this was basically a sanity check
         printf("\n\n%d\n", key[1]);
 
-    /* realizing that I only really need to check whether it's
-    upper or lower to get that value and to store it away
-    in an array.  
+    // Do i need to make sure only a letter is entered?
 
-    So, check which the character is and then subtract by 
-    97 or 65.  Then store that away
-        then we'll use that to shift later on
-
-        then we'll take the size of the array and use it
-        as a module % to loop back around
-    calling it a night
-    */
+/* END OF CHECKING FOR KEY INPUT VALUES */
 
     return 0;
 }
