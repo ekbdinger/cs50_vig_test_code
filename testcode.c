@@ -29,8 +29,15 @@ int main(int argc, string argv[1])
         printf("%d\n", argv[1][i] - 97);
         key[i] = argv[1][i] - 97;
         }
-    }    
-                
+        
+    // check to see if it's uppercase
+        if ( isupper (argv[1][i]) )
+        {
+        printf("%d\n", argv[1][i] - 65);
+        key[i] = argv[1][i] - 65;
+        }
+    }
+        // all the values are stored in k[]        
         // this was basically a sanity check
         printf("\n\n%d\n", key[1]);
 
