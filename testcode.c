@@ -63,8 +63,12 @@ int main(int argc, string argv[1])
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
         {
             char p = input[i];
-            printf("%c\n", p);
+          //  printf("%c\n", p);
+
+            // print the new letters
+            printf("the new value is:   %c\n", (p + (key[i % 3] )));
         }
+        
     }
 
 
