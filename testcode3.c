@@ -11,7 +11,7 @@ int main(int argc, string argv[1])
 
     
     int key[25]; // may need to change the size of the key here 
-  //  int n;  // so I can use in the array below
+    int n = 0;  // so I can use in the array below
   //  int cvalue[n];  // so I can use outside the loop
     
 
@@ -34,26 +34,29 @@ int main(int argc, string argv[1])
         }
     }
 
-    // loop each letter in the keear
+    // loop each letter in the key
     for (int i = 0, n = strlen(argv[1]); i < n; i++)
     {    printf("%c:  ", argv[1][i]);
     // check the value of what was entered
-// int cvalue[n]; 
+    
     // check for lower case
         if ( islower (argv[1][i]) )
         {
+       //  int cvalue[n];
+       
+       // determine how far away from a it is, to shift the user input
         printf("%d\n", argv[1][i] - 97);
         key[i] = argv[1][i] - 97;
 
         //  print the c value, after applying the key
         // store it in a variable, actually an array
-        cvalue[i] = argv[1][i] + key[i];
-        printf("the cvalue of c[2] is %c\n", cvalue[2]);
+       //  cvalue[i] = argv[1][i] + key[i];
+       //  printf("the cvalue of c[2] is %c\n", cvalue[2]); // i'm assuming this was a test, k should be applied to input
 
         // printf("  the new value is %d\n", cvalue);
         }
         
-    // check to see if it's uppercase
+    // check to see if it's uppercase, come back to this part later
         if ( isupper (argv[1][i]) )
         {
         printf("%d\n", argv[1][i] - 65);
@@ -72,10 +75,13 @@ int main(int argc, string argv[1])
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
         {
             char p = input[i];
-          //  printf("%c\n", p);
+            
+            // make it a cipher variable
+            int cipher =( p + key[i % n ]) % 26 ;
+            printf("the new value is:  %d\n", cipher);
 
-            // print the new letters
-            printf("the new value is:   %c\n", (p + (key[i % 3] )));
+            // print the new letters, c (cipher)
+            printf("the new value is:   %c\n", (p + (key[i % 3] )));  // so I think here 3 I was just using as an example
         }
         
         // new code
@@ -83,7 +89,7 @@ int main(int argc, string argv[1])
         // initialize the array so I can use it outside the for loop
         int lower[26];
 
-        // create the lowercase alphabet and store in an array
+        // create lowercase alphabet and store in an array
         for (int i = 0; i <26; i++)
             lower[i] = 97 + i;
         
