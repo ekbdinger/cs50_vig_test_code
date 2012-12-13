@@ -11,7 +11,7 @@ int main(int argc, string argv[1])
 
     
     int key[25]; // may need to change the size of the key here 
-    // int n = 0;  // so I can use in the array below
+    //int n = 0;  // so I can use in the array below
   //  int cvalue[n];  // so I can use outside the loop
     
 
@@ -77,6 +77,20 @@ int main(int argc, string argv[1])
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
             printf("%c\n", input[i]);
 
+            // now apply the key
+
+            printf("the length of argv is:  %d", strlen(argv[1]));
+/*
+            int j =  0;
+            if ( j < n ) {
+                printf("increase j by one \n");
+                j++; }
+
+            if (j >= n) {   // should this be an else if
+                printf("reset j to zero\n");
+                j = 0;
+            }
+*/
 
         printf("the 1st value of the key is: %d\n", key[0]);
 //        printf("the 1st value of the key is: %c\n", key[0]);
