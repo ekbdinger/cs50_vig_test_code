@@ -86,8 +86,11 @@ int main(int argc, string argv[1])
             // int j =  0;
             if ( j < strlen(argv[1]) ) {
                 // print the value of the key
-                printf("key = %d\n\n", key[j]);
-                                        // debugging        printf("increase j by one \n");
+                // printf("key = %d\n\n", key[j]);
+                
+                // try adding the key to the input char
+                printf("the new value is:  %d\n", (input[i] + key[j]));
+                
                 j++; 
             }
 
