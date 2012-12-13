@@ -11,7 +11,7 @@ int main(int argc, string argv[1])
 
     
     int key[25]; // may need to change the size of the key here 
-  //  int n = 0;  // so I can use in the array below
+    // int n = 0;  // so I can use in the array below
   //  int cvalue[n];  // so I can use outside the loop
     
 
@@ -71,7 +71,12 @@ int main(int argc, string argv[1])
          for (int i = 0; i <26; i++)
             lower[i] = 97 + i;
        
+       //: int input_len = strlen(input);
+        
         // NEW CODE
+        for (int i = 0, inlen = strlen(input); i < inlen; i++)
+            printf("%c\n", input[i]);
+
 
         printf("the 1st value of the key is: %d\n", key[0]);
 //        printf("the 1st value of the key is: %c\n", key[0]);
@@ -81,13 +86,12 @@ int main(int argc, string argv[1])
         // replace these with dynamic variables
         // to do this I might just want to move it up above
 
-        int alpha_num = ('y' - 97); 
-        int end = (alpha_num + 5) % 25;
+      //  int alpha_num = ('y' - 97); 
+      //  int end = (alpha_num + 5) % 25;
 
-        printf("the present value is %d\n", alpha_num);
-        printf("\n the new value is %d:  %c\n", end, lower[end]);
+     //   printf("the present value is %d\n", alpha_num);
+     //   printf("\n the new value is %d:  %c\n", end, lower[end]);
         
-        // end of new code
     }
     return 0;
 
