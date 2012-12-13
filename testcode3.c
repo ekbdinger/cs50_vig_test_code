@@ -11,7 +11,7 @@ int main(int argc, string argv[1])
 
     
     int key[25]; // may need to change the size of the key here 
-    int n = 0;  // so I can use in the array below
+  //  int n = 0;  // so I can use in the array below
   //  int cvalue[n];  // so I can use outside the loop
     
 
@@ -71,7 +71,7 @@ int main(int argc, string argv[1])
 
     if (input != NULL)
     {
-        // print one character at a time
+ /*       // print one character at a time
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
         {
             char p = input[i];
@@ -83,7 +83,7 @@ int main(int argc, string argv[1])
             // print the new letters, c (cipher)
             printf("the new value is:   %c\n", (p + (key[i % 3] )));  // so I think here 3 I was just using as an example
         }
-        
+   */     
         // new code
         
         // initialize the array so I can use it outside the for loop
