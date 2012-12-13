@@ -48,7 +48,6 @@ int main(int argc, string argv[1])
         printf("%d\n", argv[1][i] - 97);
         key[i] = argv[1][i] - 97;
 
-        // printf("  the new value is %d\n", cvalue);
         }
         
     // check to see if it's uppercase, come back to this part later
@@ -66,13 +65,18 @@ int main(int argc, string argv[1])
 
     if (input != NULL)
     {
-        // new code
         
         // create lowercase alphabet and store in an array
          int lower[26];  // initialize the array so I can use it outside the for loop
          for (int i = 0; i <26; i++)
             lower[i] = 97 + i;
-        
+       
+        // NEW CODE
+
+        printf("the 1st value of the key is: %d\n", key[0]);
+//        printf("the 1st value of the key is: %c\n", key[0]);
+      //  key[i] = argv[1][i] - 65;
+
        
         // replace these with dynamic variables
         // to do this I might just want to move it up above
@@ -85,7 +89,6 @@ int main(int argc, string argv[1])
         
         // end of new code
     }
-
-
     return 0;
+
 }
