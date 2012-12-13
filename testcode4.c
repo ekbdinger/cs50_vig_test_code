@@ -74,23 +74,28 @@ int main(int argc, string argv[1])
        //: int input_len = strlen(input);
         
         // NEW CODE
+
+        int j = 0;
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
-            printf("%c\n", input[i]);
+        {
+        printf("%c\n", input[i]);
 
             // now apply the key
 
-            printf("the length of argv is:  %d", strlen(argv[1]));
-/*
-            int j =  0;
-            if ( j < n ) {
-                printf("increase j by one \n");
-                j++; }
 
-            if (j >= n) {   // should this be an else if
-                printf("reset j to zero\n");
+            // int j =  0;
+            if ( j < strlen(argv[1]) ) {
+                // print the value of the key
+                printf("key = %d\n\n", key[j]);
+                                        // debugging        printf("increase j by one \n");
+                j++; 
+            }
+
+            if (j >= strlen(argv[1])) {   // should this be an else if
+                // debugging   printf("reset j to zero\n");
                 j = 0;
             }
-*/
+        }
 
         printf("the 1st value of the key is: %d\n", key[0]);
 //        printf("the 1st value of the key is: %c\n", key[0]);
