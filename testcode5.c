@@ -105,6 +105,10 @@ int main(int argc, string argv[1])
               
               printf("\n\n dynamically this is %d\n", alpha_num + key[j] );
 
+                int x = alpha_num + key[j];
+              printf("\n again:  %c\n", lower[x]);
+
+
 
                 // need to get the relative value in the alphabet
                // lower case a = 0, b =1, etc.
