@@ -85,7 +85,7 @@ int main(int argc, string argv[1])
             // now apply the key
 
             // relative value in the alphabet
-            int alpha_num =  (lower[i] - 97);
+            int alpha_num =  (input[i] - 97);   // this might be where the problem is
             printf("the alpha value is %d\n", alpha_num);
             
 
@@ -98,7 +98,12 @@ int main(int argc, string argv[1])
                //  printf("the new value is:  %d\n", (input[i] + key[j]));
                printf("the new value is:  %d\n", z);
             //   printf("using the array it is:  %d\n", lower[z]);  // i know what I want to do here, but I can't get it to work
-               printf("\n\nthe first value in the array is:  %c\n",  lower[25]);
+                int zero = 0;
+               printf("\n\nthe first value in the array is:  %c\n",  lower[zero]);
+              
+                printf("\nthe k value is:  %d\n", key[j]);  
+              
+              printf("\n\n dynamically this is %d\n", alpha_num + key[j] );
 
 
                 // need to get the relative value in the alphabet
