@@ -93,18 +93,26 @@ int main(int argc, string argv[1])
             if ( j < strlen(argv[1]) ) {
                 
                 // try adding the key to the input char
-                printf("the new value is:  %d\n", (input[i] + key[j]));
+                int z = (input[i] + key[j]);
+
+               //  printf("the new value is:  %d\n", (input[i] + key[j]));
+               printf("the new value is:  %d\n", z);
+            //   printf("using the array it is:  %d\n", lower[z]);  // i know what I want to do here, but I can't get it to work
+               printf("\n\nthe first value in the array is:  %c\n",  lower[25]);
+
 
                 // need to get the relative value in the alphabet
                // lower case a = 0, b =1, etc.
                //  lower[0]
-
+/*
                printf("\nthe new value is %d\n", ( (lower [i] - 97) + key[j] % 26));
                printf("\n the alpha value is %c\n",( (lower [i] - 97) + key[j] % 26));
+               printf("\n\n with the array %d\n", ( (lower [i] - 97) + key[j] % 26));
+
                 // alpha value is not printing, it needs to be the value in the array
                 // lower [1] for example
  
-                
+*/                
                 j++; 
             }
 
