@@ -81,7 +81,7 @@ int main(int argc, string argv[1])
                 if ( j < strlen(argv[1]) ) {
                 
                     //  add key to the input char with moduler
-                    int x = (alpha_num + key[j] ) % 25;
+                    int x = (alpha_num + key[j] ) % 26;
                     printf("%c", lower[x]);
                     j++; 
                 }
@@ -100,7 +100,7 @@ int main(int argc, string argv[1])
                 if ( j < strlen(argv[1]) ) {
                 
                     //  add key to the input char with moduler
-                    int x = (alpha_num_up + key[j] ) % 25;
+                    int x = (alpha_num_up + key[j] ) % 26;
                     printf("%c", upper[x]);
                     j++; 
                 }
