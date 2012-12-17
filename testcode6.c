@@ -77,9 +77,9 @@ int main(int argc, string argv[1])
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
         {
 
-        // Lower case
-
+            // Lower case
             if (islower (input[i]) ) {           
+           
                 // relative value in the alphabet
                 int alpha_num =  (input[i] - 97);   
 
@@ -88,6 +88,25 @@ int main(int argc, string argv[1])
                     //  add key to the input char with moduler
                     int x = (alpha_num + key[j] ) % 25;
                     printf("%c", lower[x]);
+                    j++; 
+                }
+
+                if (j >= strlen(argv[1])) {   // should this be an else if
+                    j = 0;
+                }
+            }
+
+           // now check for upper case
+           if (isupper (input[i]) ) {
+
+                // order in alphabet
+                int alpha_num_up = (input[i] - 65);
+
+                if ( j < strlen(argv[1]) ) {
+                
+                    //  add key to the input char with moduler
+                    int x = (alpha_num_up + key[j] ) % 25;
+                    printf("%c", upper[x]);
                     j++; 
                 }
 
