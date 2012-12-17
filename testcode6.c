@@ -18,9 +18,9 @@ int main(int argc, string argv[1])
     // verify they only enter one value for argc
     if ( argc != 2 )
     {
-    printf("please enter only one key value.\n");
-    printf("Usage:  /home/cs50/pset2/caesar <key>\n\n ");
-    return 1;
+        printf("please enter only one key value.\n");
+        printf("Usage:  /home/cs50/pset2/caesar <key>\n\n ");
+        return 1;
     }
     
     // Verify each character in the key entered is a letter 
@@ -40,17 +40,12 @@ int main(int argc, string argv[1])
     
         // check for lower case
         if ( islower (argv[1][i]) )
-        {
-            // how far is it from a, key value
-            key[i] = argv[1][i] - 97;
-        }
+            key[i] = argv[1][i] - 97; // how far is it from a, key value
         
         // check for uppercases
         if ( isupper (argv[1][i]) )
-        {
-            printf("%d\n", argv[1][i] - 65);  // will remove this eventually, debugging purposes
-            key[i] = argv[1][i] - 65;
-        }
+            key[i] = argv[1][i] - 65;  // how far from key value
+        
     }
 
 /* END OF CHECKING FOR KEY VALUES */
