@@ -1,11 +1,14 @@
 /*
     New version of this created on Dec. 16, 2012
 */
+
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
 #include <stdlib.h>  // required for atoi ()
 #include <ctype.h>  // is lower() and isdigit()
+
+
 int main(int argc, string argv[1])
 {
 
@@ -60,8 +63,15 @@ int main(int argc, string argv[1])
         
         // create lowercase alphabet and store in an array
          int lower[26];  // initialize the array so I can use it outside the for loop
-         for (int i = 0; i <26; i++)
+         for (int i = 0; i < 26; i++)
             lower[i] = 97 + i;
+
+        // create uppercase alpha
+         int upper[26];  
+         for (int i = 0; i < 26; i++)
+            upper[i] = 65 + i;
+
+         printf("the last character equals:  %c\n", upper[0]);
         
          int j = 0;  // keep this outside the for loop otherwise, won't increment
 
