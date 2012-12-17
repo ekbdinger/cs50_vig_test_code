@@ -109,6 +109,11 @@ int main(int argc, string argv[1])
                     j = 0;
                 }
             }
+            
+            // try for a space
+            if (isspace (input[i]) ) {
+                printf(" ");
+            }
         }
 
       //  int alpha_num = ('y' - 97); 
