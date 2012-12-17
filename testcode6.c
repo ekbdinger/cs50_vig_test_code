@@ -71,26 +71,29 @@ int main(int argc, string argv[1])
          for (int i = 0; i < 26; i++)
             upper[i] = 65 + i;
 
-         printf("the last character equals:  %c\n", upper[0]);
-        
          int j = 0;  // keep this outside the for loop otherwise, won't increment
 
         // print out each character entered for input
         for (int i = 0, inlen = strlen(input); i < inlen; i++)
         {
-            // relative value in the alphabet
-            int alpha_num =  (input[i] - 97);   
 
-            if ( j < strlen(argv[1]) ) {
+        // Lower case
+
+            if (islower (input[i]) ) {           
+                // relative value in the alphabet
+                int alpha_num =  (input[i] - 97);   
+
+                if ( j < strlen(argv[1]) ) {
                 
-                // try adding the key to the input char
-                int x = alpha_num + key[j];
-                printf("%c", lower[x]);
-                j++; 
-            }
+                    //  add key to the input char with moduler
+                    int x = (alpha_num + key[j] ) % 25;
+                    printf("%c", lower[x]);
+                    j++; 
+                }
 
-            if (j >= strlen(argv[1])) {   // should this be an else if
-                j = 0;
+                if (j >= strlen(argv[1])) {   // should this be an else if
+                    j = 0;
+                }
             }
         }
 
