@@ -117,7 +117,8 @@ int main(int argc, string argv[1])
 
             // trying an else here
             else {
-                printf(" this is the else statement");
+              //  printf(" this is the else statement");
+                printf("%c", input[i] );
                 }
         }
 
