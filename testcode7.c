@@ -117,14 +117,9 @@ int main(int argc, string argv[1])
 
             // trying an else here
             else {
-              //  printf(" this is the else statement");
                 printf("%c", input[i] );
                 }
         }
-
-      //  int alpha_num = ('y' - 97); 
-      //  int end = (alpha_num + 5) % 25;
-        printf("\n\n");
     }
     return 0;
 
